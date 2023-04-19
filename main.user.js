@@ -50,6 +50,7 @@
                 })
                 input.value = Math.floor(parseInt(document.querySelector('#war_max_span_equal').textContent.replace('.', ''), 10) / 6000)
                 drones.style.backgroundImage = "url(//static.rivalregions.com/static/avatars/normal/54_m/171300554_1681848773.png)"
+                alert('Данный скрипт распространяется таки бесплатно, но вы всегда можете задонатить.... https://rivalregions.com/#slide/profile/160819338')
             })
             drones.appendChild(span)
             drones.appendChild(input)
