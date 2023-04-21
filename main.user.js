@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         juliaDrones
 // @namespace    http://tampermonkey.net/
-// @version      1.0F
+// @version      1.1F
 // @description  made for PMC Genei Ryodan. Not retarded, but agile.
 // @author       bagd1k, Setux
 // @match        https://rivalregions.com/
@@ -21,7 +21,7 @@
     setInterval(async () => {
         const div = await getDiv()
         const len = await !div.length
-        if (len && location.href.match('/war\/details\//')) {
+        if (len && location.hash.match('war\/details/')) {
             const request = await fetch('https://rivalregions.com/storage')
             const page = await request.text()
             const doc = (new DOMParser).parseFromString(page, 'text/html')
