@@ -20,7 +20,8 @@
     }
     setInterval(async () => {
         const div = await getDiv()
-        if (await !div.length) {
+        const len = await !div.length
+        if (len && location.href.match('/war\/details\//')) {
             const request = await fetch('https://rivalregions.com/storage')
             const page = await request.text()
             const doc = (new DOMParser).parseFromString(page, 'text/html')
